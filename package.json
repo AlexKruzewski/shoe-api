@@ -1,0 +1,14 @@
+{
+  "name": "clean-shoes-service",
+  "version": "1.0.0",
+  "description": "clean shoes api",
+  "main": "handler.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "graphql": "^0.12.3"
+  }
+}
