@@ -10,7 +10,11 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "graphql": "^0.12.3"
+    "aws": "0.0.3-2",
+    "aws-sdk": "^2.192.0",
+    "graphiql": "^0.11.11",
+    "graphql": "^0.12.3",
+    "serverless-plugin-graphiql": "^0.3.0"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",

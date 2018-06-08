@@ -3,9 +3,11 @@ import {
     GraphQLSchema,
     GraphQLList,
     GraphQLString,
+    GraphQLInt,
     GraphQLNonNull
   } from 'graphql';
 
+const AWS = require('aws-sdk');
 const dynamoDb = new AWS.DynamoDB.DocumentClient();
 import { createShoe, getLeather, getShoe, getpolish } from './dynamo';
 
@@ -57,7 +59,7 @@ const Query = new GraphQLObjectType({
       fields: {
         shoe: { 
           args: { shoeId: { type: GraphQLString } },
-          type: new GraphQLObjectType(Shoe),
+          type: Shoe,
           resolve: (parent, args) => getShoe(args.shoeId)
         },
       },
@@ -86,7 +88,7 @@ const Mutation = new GraphQLObjectType({
 
 const Schema = new GraphQLSchema({
     query: Query,
-    mutation: Mutuation
+    mutation: Mutation
   });
 
 export default Schema;

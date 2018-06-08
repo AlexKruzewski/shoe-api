@@ -16,17 +16,7 @@ provider:
             - dynamodb:UpdateItem
             - dynamodb:DeleteItem
           Resource: "arn:aws:dynamodb:ap-southeast-2:*:*"
-
-
-# functions:
-#     graphQl:
-#         handler: handler.get
-#         events:
-#             - http:
-#                 path: graphql
-#                 method: get
-#                 cors: true
-
+          
 functions:
   query:
     handler: handler.handler
